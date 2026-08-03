@@ -1,0 +1,137 @@
+{
+  "accounting": {
+    "delisting": "terminal proceeds become cash until next rebalance",
+    "initial_state": "100pct_cash",
+    "net_return": "gross_return_minus_cost_rate_times_turnover",
+    "turnover": "sum_abs_risky_assets_cash_excluded"
+  },
+  "array_file": "timing_test_inputs.npz",
+  "array_sha256": "a2f00d520a8de0da769c72c9affe7add0619633d28f2bf91079fe516f24814e9",
+  "base_seed": 20250318,
+  "cells12": [
+    "L_all",
+    "L_exdc",
+    "S_all",
+    "S_exdc",
+    "L_d1",
+    "L_d2",
+    "L_d3",
+    "S_d1",
+    "S_d2",
+    "S_d3",
+    "L_rho_hi",
+    "L_rho_lo"
+  ],
+  "cells4": [
+    "L_all",
+    "L_exdc",
+    "S_all",
+    "S_exdc"
+  ],
+  "date_contract": {
+    "decades": {
+      "d1": [
+        "1995-01-01",
+        "2004-12-31"
+      ],
+      "d2": [
+        "2005-01-01",
+        "2014-12-31"
+      ],
+      "d3": [
+        "2015-01-01",
+        "2025-12-31"
+      ]
+    },
+    "dotcom_exclusion": [
+      "1999-01-01",
+      "2001-12-31"
+    ],
+    "end": "2025-12-31",
+    "rho_regimes": "large-cap formation sqrt(rho), full-sample median, high >= median",
+    "start": "1995-01-31"
+  },
+  "dependence_contract": {
+    "block12": "separate twelve-month null for the level-1 large-cap placebo",
+    "block6": "separate six-month null for the level-1 large-cap placebo",
+    "simple": "one monthly permutation shared by L and S within every draw"
+  },
+  "draws": 1000,
+  "epsilon_cap": 2.0,
+  "epsilon_floor": 0.0001,
+  "experiment_digest": "88e42643b59e1a736ba20a8a722159bcc13724fb62b954967f68c2648cfbb2e8",
+  "method_blocks": {
+    "block12": 12,
+    "block6": 6,
+    "simple": 1
+  },
+  "n_assets": 100,
+  "n_months": 372,
+  "observed_cells_gross": {
+    "L_all": 0.05707299517062747,
+    "L_d1": 0.13151410557162047,
+    "L_d2": 0.0009007740138481379,
+    "L_d3": 0.008086766335599349,
+    "L_exdc": 0.0015654378067819774,
+    "L_rho_hi": 0.07585337702884237,
+    "L_rho_lo": -0.005954150477835096,
+    "S_all": 0.007849030896533993,
+    "S_d1": 0.00850623828613517,
+    "S_d2": 0.0071639092897367584,
+    "S_d3": 0.009926023130766737,
+    "S_exdc": 0.00546289064951444
+  },
+  "observed_cells_net": {
+    "L_all": 0.055945810981137156,
+    "L_d1": 0.13167407249649232,
+    "L_d2": -0.001885495495698608,
+    "L_d3": 0.006385047542714295,
+    "L_exdc": 0.00011685955783935498,
+    "L_rho_hi": 0.07661990035273109,
+    "L_rho_lo": -0.009519007034875182,
+    "S_all": 0.007962764067994232,
+    "S_d1": 0.010118213856236458,
+    "S_d2": 0.006267975959259875,
+    "S_d3": 0.009623518146160248,
+    "S_exdc": 0.0052466143877598626
+  },
+  "primary_basis": "net",
+  "schema_version": "portfolio-timing-three-level-v2.0.0",
+  "solver_contract": {
+    "formulation": "linear-loss-direct-W2-SOCP",
+    "notebook_cross_contract_tolerances": {
+      "return": 1e-06,
+      "turnover": 5e-05
+    },
+    "portfolio_engine": "portfolio-pit-v2.0.0-direct-w2-socp",
+    "silent_fallback": false,
+    "solver": "MOSEK",
+    "threads_runtime_guarded": true,
+    "warm_start": false
+  },
+  "source_bundle_digest": "a04a878c06fa32c0c0102327166b6ae7938feb821e402c163dfcacb39b0ae7c0",
+  "target_cell": "S_exdc",
+  "test_levels": {
+    "level1": {
+      "nulls": [
+        "simple",
+        "block6",
+        "block12"
+      ],
+      "statistic": "large-cap dynamic annualised Sharpe"
+    },
+    "level2": {
+      "family": "cells4",
+      "resampling": "simple",
+      "statistic": "dynamic-minus-static annualised Sharpe",
+      "target": "S_exdc"
+    },
+    "level3": {
+      "family": "cells12",
+      "resampling": "simple",
+      "statistic": "dynamic-minus-static annualised Sharpe",
+      "target": "S_exdc"
+    }
+  },
+  "window_rows": 36
+}

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the thesis and the replication code."
+title: "MT-MFDRO: Replication code for endogenous calibration of the Wasserstein ambiguity radius"
+type: software
+authors:
+  - family-names: "Jeylani Bakari"
+    given-names: "Abdul Kadir"
+repository-code: "https://github.com/jeyllani/mt-mfdro"
+url: "https://github.com/jeyllani/mt-mfdro"
+license: MIT
+keywords:
+  - distributionally robust optimization
+  - Wasserstein distance
+  - portfolio optimization
+  - ambiguity-radius timing
+  - reproducible research

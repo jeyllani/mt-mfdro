@@ -1,0 +1,18 @@
+# Licensed or host-specific inputs
+/data/
+
+# Locally generated shards, merged results, and logs
+/results/
+/logs/
+
+# Private-run checksum written by prepare_inputs.py
+SHA256SUMS
+
+# Python and notebook artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Platform/editor metadata
+.DS_Store
+*.swp

@@ -1,0 +1,13 @@
+name: mthesis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - numpy==2.4.4
+      - pandas==2.3.3
+      - polars==1.39.3
+      - pyarrow==23.0.1
+      - cvxpy==1.8.2
+      - Mosek==11.1.10

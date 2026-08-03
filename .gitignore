@@ -1,0 +1,109 @@
+# Operating-system and editor metadata
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Python environments and generated state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+.wheel-venv/
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+.netrc
+.Renviron
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Licensed, private, temporary, or computationally generated project data.
+# The data tree is deny-by-default. Only the documented CRSP/delisting
+# processing source is eligible for publication; no input, output, ledger, or
+# manifest containing CRSP-derived observations is re-included.
+!/data/
+/data/*
+!/data/RAW_DATA_PS/
+/data/RAW_DATA_PS/*
+!/data/RAW_DATA_PS/README.md
+!/data/RAW_DATA_PS/01_crsp+del_processing.ipynb
+!/data/RAW_DATA_PS/src/
+/data/RAW_DATA_PS/src/*
+!/data/RAW_DATA_PS/src/__init__.py
+!/data/RAW_DATA_PS/src/delisting_panel_builder.py
+
+cache/
+tmp/
+outputs/
+literature/
+standalone_final_/
+
+# Separate publications and private authoring trees. The reusable package is
+# released from its own repository; the thesis PDF can be attached separately
+# to a tagged release without publishing the full authoring worktree.
+/package/
+/Article/
+/MThesis/
+/beamer/
+
+# Internal release-audit notes are not part of the public repository.
+/reproducibility/PUBLICATION_MAP.md
+
+# Superseded implementation retained locally for historical audit only.
+/src/portfolio_universe_maxt.py
+
+# Restricted or potentially licensed binary datasets are excluded everywhere
+# unless a publication-safe aggregate artifact is explicitly allowed below.
+*.parquet
+*.npz
+*.npy
+*.feather
+*.arrow
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.sqlite
+*.sqlite3
+
+# Joint permutation statistics contain aggregate test outputs only. They do
+# not contain security-level returns, holdings, identifiers, or weight paths.
+!reproducibility/portfolio_timing_tests/reference/results/*.parquet
+
+# Local agent state
+.codex/
+.agents/
+
+# LaTeX build artifacts (final PDFs remain eligible for tracking)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# Local timing-test runtime artifacts; published reference results are stored
+# under reproducibility/portfolio_timing_tests/reference/results/.
+reproducibility/portfolio_timing_tests/data/
+reproducibility/portfolio_timing_tests/logs/
+reproducibility/portfolio_timing_tests/results/
+reproducibility/portfolio_timing_tests/SHA256SUMS

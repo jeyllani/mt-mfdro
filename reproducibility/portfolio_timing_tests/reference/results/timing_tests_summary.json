@@ -1,0 +1,46 @@
+{
+  "draws": 1000,
+  "experiment_digest": "88e42643b59e1a736ba20a8a722159bcc13724fb62b954967f68c2648cfbb2e8",
+  "files": {
+    "draws": "timing_tests_B1000_88e42643b59e.parquet",
+    "inference": "levels2_3_inference_B1000_88e42643b59e.parquet",
+    "placebo": "level1_placebo_B1000_88e42643b59e.parquet"
+  },
+  "level1_placebo": {
+    "block12": {
+      "exceedances": 8,
+      "null_mean": 0.6681748483663058,
+      "null_q95": 0.7294996044588968,
+      "observed_sharpe": 0.7451335762355062,
+      "p_value": 0.008991008991008992
+    },
+    "block6": {
+      "exceedances": 2,
+      "null_mean": 0.6654694102525169,
+      "null_q95": 0.7162812650306427,
+      "observed_sharpe": 0.7451335762355062,
+      "p_value": 0.002997002997002997
+    },
+    "simple": {
+      "exceedances": 0,
+      "null_mean": 0.6534538073119458,
+      "null_q95": 0.6955678592990484,
+      "observed_sharpe": 0.7451335762355062,
+      "p_value": 0.000999000999000999
+    }
+  },
+  "level2_maxT4": {
+    "exceedances": 99,
+    "p_value": 0.0999000999000999,
+    "target_observed_delta_sharpe": 0.005246683278329445
+  },
+  "level3_maxT12": {
+    "exceedances": 547,
+    "p_value": 0.5474525474525475,
+    "target_observed_delta_sharpe": 0.005246683278329445
+  },
+  "primary_basis": "net",
+  "runtime_digest": "ab80d68d654daad4daf6dea173d5f54248f0003ad6499c56c5dab7fb9e74fd39",
+  "schema_version": "portfolio-timing-tests-summary-v1.0.0",
+  "target_cell": "S_exdc"
+}
