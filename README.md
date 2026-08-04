@@ -3,6 +3,7 @@
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](environment.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PyPI: mfdro](https://img.shields.io/pypi/v/mfdro.svg)](https://pypi.org/project/mfdro/)
+[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue.svg)](https://jeyllani.github.io/mfdro/)
 
 Replication repository for my master's thesis **Distributionally Robust
 Optimization: Endogenous Calibration of the Wasserstein Ambiguity Radius**,
@@ -88,6 +89,10 @@ python -m pip install mfdro
 Its source repository is linked under [`mfdro/`](mfdro/) as a Git submodule,
 pinned to a specific commit for reproducibility. The submodule is provided as
 related reusable software; the thesis notebooks do not require it.
+
+The complete package documentation, including the API reference and usage
+examples, is available at
+[`jeyllani.github.io/mfdro`](https://jeyllani.github.io/mfdro/).
 
 The package provides a parameterized public API for constructing the signal.
 It does not reproduce the CRSP universes, portfolio engine, or inference
