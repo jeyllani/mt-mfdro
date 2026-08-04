@@ -13,23 +13,25 @@ submitted to HEC Lausanne, University of Lausanne.
 
 ## Abstract
 
-My thesis examines whether the timing of the Wasserstein ambiguity radius can
+<p align="justify">
+This thesis examines whether the timing of the Wasserstein ambiguity radius can
 be driven by observable information and have economic value distinct from its
-average level. I construct a misalignment signal from daily, weekly, and
-monthly return distributions, aggregate them around a Wasserstein barycenter,
-and compare them using Sliced-Wasserstein distances. The signal modulates the
-radius of a $W_2$ ambiguity set in a linear-loss portfolio problem, which I
-evaluate through a point-in-time walk-forward design over 1995–2025. In the
-main universe, I find that the net Sharpe ratio increases from 0.6892 to
-0.7451, a gain of 0.0559. Neither the paired HAC test nor the paired bootstrap
-establishes a general improvement at the 5% level. Signal-ordering placebos
-reject the interchangeability of the observed temporal ordering, and the main
-specification remains significant after max-$T$ adjustment within both the
+average level. We construct a misalignment signal from daily, weekly, and
+monthly return distributions, aggregated around a Wasserstein barycenter and
+compared using Sliced-Wasserstein distances. The signal modulates the radius of
+a W<sub>2</sub> ambiguity set in a linear-loss portfolio problem, evaluated
+through a point-in-time walk-forward design over 1995–2025. In the main
+universe, the net Sharpe ratio increases from 0.6892 to 0.7451, a gain of
+0.0559. Neither the paired HAC test nor the paired bootstrap establishes a
+general improvement at the 5% level. Signal-ordering placebos reject the
+interchangeability of the observed temporal ordering, and the main
+specification remains significant after max-<i>T</i> adjustment within both the
 four-cell and twelve-cell families. A modulation based on realized volatility
 nevertheless achieves a slightly higher point estimate, without a significant
-paired difference. My contribution is therefore primarily methodological: the
-level and timing of the ambiguity radius can be distinguished and tested, but
-the signal's incremental economic value has not been established.
+paired difference. The contribution is therefore primarily methodological:
+the level and timing of the ambiguity radius can be distinguished and tested,
+but the signal's incremental economic value has not been established.
+</p>
 
 ## Selected results
 
