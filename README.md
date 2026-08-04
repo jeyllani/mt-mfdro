@@ -103,40 +103,25 @@ reported in my thesis, and it is not required to execute this repository.
 ```text
 mt-mfdro/
 ├── README.md
-├── Manuscript.pdf                # complete master's thesis
+├── Manuscript.pdf                     # complete master's thesis
 ├── DATA_ACCESS.md
 ├── CITATION.cff
 ├── LICENSE
 ├── environment.yml
-├── artifacts/                     # figures, tables, and public research outputs
-├── data/RAW_DATA_PS/             # publishable processing code only
-├── mfdro/                         # pinned reusable-package submodule
-├── notebooks/                    # empirical pipeline, steps 00--05
-├── src/                          # active shared inference code
-├── tests/                        # validation notebooks, steps 00--04
+├── artifacts/                         # figures, tables, and public research outputs
+├── data/RAW_DATA_PS/                  # publishable processing code only
+├── mfdro/                             # pinned reusable-package submodule
+├── notebooks/                         # empirical pipeline, steps 00--05
+├── src/                               # active shared inference code
+├── tests/                             # validation notebooks, steps 00--04
 └── reproducibility/
-    └── portfolio_timing_tests/   # signed permutation/max-T experiment
+    └── portfolio_timing_tests/        # signed permutation/max-T experiment
 ```
 
 Licensed source data, internal caches, security-level audit ledgers, local logs,
 and non-public generated artifacts are deliberately excluded from version
 control. A curated identifier-free research-output bundle is released under
 `artifacts/data/`; it is not an internal cache or a substitute for CRSP access.
-
-## Clone
-
-Clone the repository and its pinned `mfdro` submodule together:
-
-```bash
-git clone --recurse-submodules https://github.com/jeyllani/mt-mfdro.git
-cd mt-mfdro
-```
-
-For an existing clone, initialize or update the submodule with:
-
-```bash
-git submodule update --init --recursive
-```
 
 ## Environment
 
