@@ -85,6 +85,10 @@ The reusable signal implementation is maintained separately as the
 python -m pip install mfdro
 ```
 
+Its source repository is linked under [`mfdro/`](mfdro/) as a Git submodule,
+pinned to a specific commit for reproducibility. The submodule is provided as
+related reusable software; the thesis notebooks do not require it.
+
 The package provides a parameterized public API for constructing the signal.
 It does not reproduce the CRSP universes, portfolio engine, or inference
 reported in my thesis, and it is not required to execute this repository.
@@ -101,6 +105,7 @@ mt-mfdro/
 ├── environment.yml
 ├── artifacts/                     # figures, tables, and public research outputs
 ├── data/RAW_DATA_PS/             # publishable processing code only
+├── mfdro/                         # pinned reusable-package submodule
 ├── notebooks/                    # empirical pipeline, steps 00--05
 ├── src/                          # active shared inference code
 ├── tests/                        # validation notebooks, steps 00--04
@@ -112,6 +117,21 @@ Licensed source data, internal caches, security-level audit ledgers, local logs,
 and non-public generated artifacts are deliberately excluded from version
 control. A curated identifier-free research-output bundle is released under
 `artifacts/data/`; it is not an internal cache or a substitute for CRSP access.
+
+## Clone
+
+Clone the repository and its pinned `mfdro` submodule together:
+
+```bash
+git clone --recurse-submodules https://github.com/jeyllani/mt-mfdro.git
+cd mt-mfdro
+```
+
+For an existing clone, initialize or update the submodule with:
+
+```bash
+git submodule update --init --recursive
+```
 
 ## Environment
 
