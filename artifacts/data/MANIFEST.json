@@ -1,0 +1,756 @@
+{
+  "description": "Identifier-free research results for public execution of notebooks 03-05",
+  "excludes": [
+    "CRSP source observations",
+    "security identifiers",
+    "security-level returns",
+    "portfolio constituents",
+    "security-level weights"
+  ],
+  "files": [
+    {
+      "bytes": 6769,
+      "columns": [
+        "basis",
+        "delta_sharpe",
+        "hac_mean_difference",
+        "hac_t_stat",
+        "hac_p_value",
+        "hac_lags",
+        "bootstrap_estimate",
+        "bootstrap_ci_low",
+        "bootstrap_ci_high",
+        "bootstrap_p_value"
+      ],
+      "path": "artifacts/data/portfolio/P_01_static_dynamic_inference.parquet",
+      "rows": 2,
+      "sha256": "f61a11f86ebc1a84d266970907b47d931694c97a9693fd4c8e91e860bafefe04"
+    },
+    {
+      "bytes": 8073,
+      "columns": [
+        "strategy",
+        "basis",
+        "annual_return",
+        "cagr",
+        "volatility",
+        "Sharpe",
+        "Sortino",
+        "MaxDD",
+        "Calmar",
+        "CVaR95",
+        "DD_duration",
+        "DD_date",
+        "turnover"
+      ],
+      "path": "artifacts/data/portfolio/P_01_static_dynamic_metrics.parquet",
+      "rows": 4,
+      "sha256": "90ed3e77ce993dc5ea7afbe3b75e07c03d45f7d10d5303c35e6db45d6e2007a6"
+    },
+    {
+      "bytes": 6762,
+      "columns": [
+        "method",
+        "block_months",
+        "basis",
+        "observed_sharpe",
+        "exceedances",
+        "draws",
+        "p_value",
+        "null_mean",
+        "null_q95",
+        "experiment_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_02_placebo_inference.parquet",
+      "rows": 6,
+      "sha256": "016c8d6997472ed7e86f309fa4e5ba0bd510cd15faee8cde080944b3315cc59c"
+    },
+    {
+      "bytes": 13003,
+      "columns": [
+        "scope",
+        "name",
+        "basis",
+        "n",
+        "sharpe_static",
+        "sharpe_dynamic",
+        "delta_sharpe",
+        "mean_static_ann",
+        "mean_dynamic_ann",
+        "delta_mean_ann",
+        "sample_weight",
+        "mean_contribution_ann",
+        "peak_date",
+        "window_start",
+        "window_end",
+        "rho_threshold",
+        "engine_digest",
+        "attribution_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_03_conditional_attribution.parquet",
+      "rows": 16,
+      "sha256": "a20c66bd488ba9d448870518426cf45b58370787fb0c2062104057f2fc530d83"
+    },
+    {
+      "bytes": 9298,
+      "columns": [
+        "strategy",
+        "basis",
+        "annual_return",
+        "cagr",
+        "volatility",
+        "Sharpe",
+        "Sortino",
+        "MaxDD",
+        "Calmar",
+        "CVaR95",
+        "DD_duration",
+        "DD_date",
+        "turnover",
+        "landscape_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_04_landscape_metrics.parquet",
+      "rows": 8,
+      "sha256": "d62bacb6d17800c2e042617e4f1e174f88f38f5f8eb682708035b256f1972c1f"
+    },
+    {
+      "bytes": 70334,
+      "columns": [
+        "strategy",
+        "formation_month",
+        "return_date",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "end_cash_weight",
+        "n_delisted",
+        "landscape_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_04_landscape_monthly.parquet",
+      "rows": 1488,
+      "sha256": "0e6e6a80a3814e7294b90bdd6aba918bb0dfc9e83246cd4683a234a9177c86e9"
+    },
+    {
+      "bytes": 66382,
+      "columns": [
+        "formation_month",
+        "return_date",
+        "epsilon",
+        "prior_observations",
+        "prior_sharpe",
+        "cv_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_05_cv_expanding_scores.parquet",
+      "rows": 5376,
+      "sha256": "783bd580f80443f24f1398b60eef79decac42f98393a7dd6295c6c99a2e00546"
+    },
+    {
+      "bytes": 37172,
+      "columns": [
+        "strategy",
+        "formation_month",
+        "return_date",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "end_cash_weight",
+        "n_delisted",
+        "landscape_digest",
+        "selected_epsilon",
+        "selected_prior_sharpe",
+        "prior_observations",
+        "is_initialisation",
+        "selection_source",
+        "cv_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_05_cv_portfolio_monthly.parquet",
+      "rows": 372,
+      "sha256": "e2ff017ed1883fb24693d8006f1d4e48ec1b5f7247260397c2573fb7ec6d1721"
+    },
+    {
+      "bytes": 17844,
+      "columns": [
+        "formation_month",
+        "return_date",
+        "selected_epsilon",
+        "selected_prior_sharpe",
+        "prior_observations",
+        "is_initialisation",
+        "selection_source",
+        "cv_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_05_cv_selection_path.parquet",
+      "rows": 372,
+      "sha256": "3e0c2f97f905ee300966d2918fae9efb7482c875f43cdc1d33f019cc0dd5a2c1"
+    },
+    {
+      "bytes": 3687,
+      "columns": [
+        "statistic",
+        "value",
+        "unit",
+        "cv_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_05_degeneracy_summary.parquet",
+      "rows": 15,
+      "sha256": "3cf0bbb609418a043b6431633c0d4631f41e1e45f3ff94e81a13b51ffcd09cc5"
+    },
+    {
+      "bytes": 382,
+      "media_type": "application/json",
+      "path": "artifacts/data/portfolio/P_06_timing_tests_summary.json",
+      "sha256": "154664cc282732618a3e42a8862c5e658355c9e8393a228db069adad554442b4"
+    },
+    {
+      "bytes": 75363,
+      "columns": [
+        "universe",
+        "formation_month",
+        "return_date",
+        "strategy",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "end_cash_weight",
+        "n_delisted",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_06_universe_monthly.parquet",
+      "rows": 1488,
+      "sha256": "df894c3cae976c432ef24631dbdd24d8da368bb642b8c29688eebcc856fd891b"
+    },
+    {
+      "bytes": 8850,
+      "columns": [
+        "universe",
+        "sample",
+        "basis",
+        "n_months",
+        "static_sharpe",
+        "dynamic_sharpe",
+        "delta_sharpe",
+        "static_turnover",
+        "dynamic_turnover",
+        "cell",
+        "p_marginal",
+        "marginal_exceedances",
+        "experiment_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_06_universe_observed.parquet",
+      "rows": 8,
+      "sha256": "e3ab3f847fe3b127eeadfa34d2cb65703883e4c2ba4a0b5fde7cd88ac78dec41"
+    },
+    {
+      "bytes": 8807,
+      "columns": [
+        "cell",
+        "basis",
+        "observed_delta_sharpe",
+        "marginal_exceedances",
+        "p_marginal",
+        "maxT4_exceedances",
+        "p_maxT4",
+        "maxT12_exceedances",
+        "p_maxT12",
+        "is_target",
+        "draws",
+        "experiment_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_07_P_08_timing_inference.parquet",
+      "rows": 24,
+      "sha256": "4a7741f9d47dbbc709ba62e2dc95d62c9cd9d9ab1ac71ad5276f2d7091d85982"
+    },
+    {
+      "bytes": 8195,
+      "columns": [
+        "cell",
+        "basis",
+        "observed_delta_sharpe",
+        "marginal_exceedances",
+        "p_marginal",
+        "maxT4_exceedances",
+        "p_maxT4",
+        "maxT12_exceedances",
+        "p_maxT12",
+        "is_target",
+        "draws",
+        "experiment_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_07_maxt4_inference.parquet",
+      "rows": 8,
+      "sha256": "fa260bb07629ab97cd5886d334d2b0b5d63425427b75544b56534d5529d2e37f"
+    },
+    {
+      "bytes": 8807,
+      "columns": [
+        "cell",
+        "basis",
+        "observed_delta_sharpe",
+        "marginal_exceedances",
+        "p_marginal",
+        "maxT4_exceedances",
+        "p_maxT4",
+        "maxT12_exceedances",
+        "p_maxT12",
+        "is_target",
+        "draws",
+        "experiment_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_08_maxt12_inference.parquet",
+      "rows": 24,
+      "sha256": "4a7741f9d47dbbc709ba62e2dc95d62c9cd9d9ab1ac71ad5276f2d7091d85982"
+    },
+    {
+      "bytes": 9493,
+      "columns": [
+        "lever",
+        "value",
+        "dynamic_path",
+        "static_path",
+        "delta_sharpe_net",
+        "delta_sharpe_gross",
+        "dynamic_sharpe_net",
+        "annual_return_net",
+        "volatility_net",
+        "MaxDD_net",
+        "turnover",
+        "clip_fraction",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_09_robustness_metrics.parquet",
+      "rows": 12,
+      "sha256": "8bbb35e98d2cd3e5d90a525ba7ef2e88212d13403d16bfa0ede6f19929048752"
+    },
+    {
+      "bytes": 225434,
+      "columns": [
+        "path_id",
+        "formation_month",
+        "return_date",
+        "rebalanced",
+        "epsilon",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "end_cash_weight",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_09_robustness_monthly.parquet",
+      "rows": 5208,
+      "sha256": "09b9841158d1d1b0e8d5039434b9b6548c0a04013faace43bf7f3c3014fe4f5c"
+    },
+    {
+      "bytes": 6228,
+      "columns": [
+        "universe",
+        "period",
+        "basis",
+        "date_start",
+        "date_end",
+        "n_months",
+        "static_sharpe",
+        "dynamic_sharpe",
+        "delta_sharpe"
+      ],
+      "path": "artifacts/data/portfolio/P_09_temporal_stability.parquet",
+      "rows": 12,
+      "sha256": "de36c3d7bbc01d4cfeac032035955acd7772ee1a9d9f057faa54ad921a808f27"
+    },
+    {
+      "bytes": 454264,
+      "columns": [
+        "base_radius",
+        "strategy",
+        "formation_month",
+        "return_date",
+        "epsilon",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "end_cash_weight",
+        "weight_l2",
+        "n_delisted",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_09_useful_radius_monthly.parquet",
+      "rows": 8184,
+      "sha256": "b8749fcef2e49837d8e3425668f1658ef05f9ae94e8d5ca9a6d54534140df0c7"
+    },
+    {
+      "bytes": 7220,
+      "columns": [
+        "base_radius",
+        "delta_sharpe_net",
+        "delta_sharpe_gross",
+        "static_weight_l2",
+        "dynamic_weight_l2",
+        "static_turnover",
+        "dynamic_turnover",
+        "dynamic_clip_fraction",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_09_useful_radius_summary.parquet",
+      "rows": 11,
+      "sha256": "533140772366242f6f5a169a4c0d98b629be571d98c065f8f8675cef622f7731"
+    },
+    {
+      "bytes": 6604,
+      "columns": [
+        "universe",
+        "benchmark",
+        "rho_minus_benchmark_sharpe",
+        "ci_low",
+        "ci_high",
+        "p_value_unadjusted",
+        "draws",
+        "bootstrap_digest",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_10_volatility_benchmark_inference.parquet",
+      "rows": 4,
+      "sha256": "4f13e86366a3dc6229eb3bb4ce289164ced4677a64b3dfa368b074194493a1af"
+    },
+    {
+      "bytes": 8149,
+      "columns": [
+        "universe",
+        "basis",
+        "strategy",
+        "sharpe",
+        "delta_sharpe_vs_static",
+        "rho_minus_strategy_sharpe",
+        "annual_return",
+        "volatility",
+        "MaxDD",
+        "turnover",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_10_volatility_benchmark_metrics.parquet",
+      "rows": 16,
+      "sha256": "a576cbdfbe9211a266b80948f3f8d4489c8ecee528812d73746c24f03836ee97"
+    },
+    {
+      "bytes": 127258,
+      "columns": [
+        "universe",
+        "formation_month",
+        "return_date",
+        "strategy",
+        "gross_return",
+        "net_return",
+        "turnover",
+        "transaction_cost",
+        "engine_digest"
+      ],
+      "path": "artifacts/data/portfolio/P_10_volatility_benchmark_monthly.parquet",
+      "rows": 2976,
+      "sha256": "bd8fbbe6e8254d341b14c5302447939aa6b869bd14a57e23cde36e7755fc076b"
+    },
+    {
+      "bytes": 55402,
+      "columns": [
+        "universe",
+        "formation_month",
+        "signal_date",
+        "strategy",
+        "signal_level",
+        "expanding_mean",
+        "modulation",
+        "epsilon"
+      ],
+      "path": "artifacts/data/portfolio/P_10_volatility_benchmark_signals.parquet",
+      "rows": 1488,
+      "sha256": "865dcf4966ff33e89f5d29a40d2c20491961455999cd3c3a8b4e1161073708d5"
+    },
+    {
+      "bytes": 7060,
+      "columns": [
+        "placebo",
+        "preserves",
+        "B",
+        "real_percentile",
+        "null_mean",
+        "null_q95",
+        "p_value",
+        "real_sharpe_net",
+        "engine_digest",
+        "placebo_digest"
+      ],
+      "path": "artifacts/data/portfolio/placebo_panel_summary.parquet",
+      "rows": 3,
+      "sha256": "76b0c8bdac25f5791003e55c31c7d01a35fa6013c0dc6e1297f7f5a40041e16a"
+    },
+    {
+      "bytes": 1143,
+      "media_type": "application/json",
+      "path": "artifacts/data/portfolio/portfolio_engine_manifest.json",
+      "sha256": "ae7a7345fb52a92a4a6ff94817e9733b8feb43b006d54a6197e1919239b017f3"
+    },
+    {
+      "bytes": 97710,
+      "columns": [
+        "formation_month",
+        "formation_date",
+        "holding_month",
+        "return_date",
+        "strategy",
+        "realised",
+        "epsilon",
+        "rho",
+        "rho_modulation",
+        "pre_risky_sum",
+        "pre_cash_weight",
+        "target_weight_sum",
+        "turnover",
+        "cost_bps",
+        "transaction_cost",
+        "gross_factor",
+        "gross_return",
+        "net_return",
+        "end_risky_sum",
+        "end_cash_weight",
+        "n_delisted",
+        "gross_reconciliation_error",
+        "engine_digest",
+        "gross_wealth",
+        "net_wealth"
+      ],
+      "path": "artifacts/data/portfolio/portfolio_monthly.parquet",
+      "rows": 744,
+      "sha256": "9460c02bb31ec6a449ce86de48247b8d21cb93e4b785fa84e24f63bf2ef797cc"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_H04.parquet",
+      "rows": 373,
+      "sha256": "2c81ba039098845dcaba61412e106d68e37567c3bb074a550dcf754889fd65e4"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_H06.parquet",
+      "rows": 373,
+      "sha256": "d5da213e0564784c3ef8a9fa298cd45344743064190e60e3134f360928ff243c"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_M36.parquet",
+      "rows": 373,
+      "sha256": "ebc1f830776b0169470f81a1af2f4634b0a9c12be1a662356e01600bdc958050"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_M72.parquet",
+      "rows": 373,
+      "sha256": "9734fd2bf1a16e4206c8b1bef49514707d5a8171d3d0a242f5adf07d81153d81"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_bary1d.parquet",
+      "rows": 373,
+      "sha256": "32bfef382f3f43887b376fab56c72a5c7c5f854d2c4e9e42884f23797dfb7c18"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_exact.parquet",
+      "rows": 373,
+      "sha256": "a25d7ebac1b1d75d26d244b38fae16857c09248c90a74e37edf449007cdce87c"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_lamTk.parquet",
+      "rows": 373,
+      "sha256": "4dfb581024810fb01a77bd014dc59d2fe792bd76d062cecc659b6ddc48b13ed8"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_lamlog.parquet",
+      "rows": 373,
+      "sha256": "82313d59fad751e525d3d616453c09f7af6eb0b3914ce86508c670ec737238c7"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/U_volscale.parquet",
+      "rows": 373,
+      "sha256": "69aac3177ed65f78cb2caf50514e5c3ac7540dfd1e9546f126b71de7b5cde40f"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/V_small_uni.parquet",
+      "rows": 373,
+      "sha256": "955bab6156ea16b60bf68684e7b8eec89f4b7d63868e756b8a8d44447aa5b5f7"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/V_uni.parquet",
+      "rows": 373,
+      "sha256": "cc15d53a6d9908f6b34230067b5fe9001d4f19fec80650f404444cbd4e5dc15c"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/V_uni_W48.parquet",
+      "rows": 373,
+      "sha256": "805dd45d987e27b582daab52891da5c6f73d09a937bae50c10a9b53dbebf7517"
+    },
+    {
+      "bytes": 8576,
+      "columns": [
+        "date",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/V_uni_W60.parquet",
+      "rows": 373,
+      "sha256": "cf63fb5150cdc894b2010d9be156730a547f1981aa1057e2ba8d3d69f7f83bcf"
+    },
+    {
+      "bytes": 4279,
+      "columns": [
+        "regime",
+        "window_end",
+        "L",
+        "mean",
+        "std",
+        "cv_pct"
+      ],
+      "path": "artifacts/data/signal/mc_convergence.parquet",
+      "rows": 14,
+      "sha256": "829474ff7492c1fb2b4730049d3496f06d635961cba479952e3e7a6dcd4a0397"
+    },
+    {
+      "bytes": 10590,
+      "columns": [
+        "formation_month",
+        "h0",
+        "h1"
+      ],
+      "path": "artifacts/data/signal/placebo_h0h1.parquet",
+      "rows": 300,
+      "sha256": "e9b619200d059d33f2b75c9cf9697b003cc25e9c1f99bb314ed9c557cc1cea70"
+    },
+    {
+      "bytes": 2296,
+      "columns": [
+        "kind",
+        "x",
+        "power"
+      ],
+      "path": "artifacts/data/signal/power_curves.parquet",
+      "rows": 11,
+      "sha256": "5122353c101e379b09e3f1516f2a910f4f5f9edfb46473b1789356443dea2b18"
+    },
+    {
+      "bytes": 229650,
+      "columns": [
+        "date",
+        "formation_month",
+        "universe",
+        "config_id",
+        "lookback_months",
+        "n_assets",
+        "M_atoms",
+        "n_projections",
+        "n_quantiles",
+        "frequency_weights",
+        "scaling",
+        "exponent",
+        "distance",
+        "barycenter",
+        "seed",
+        "engine_version",
+        "source_signature",
+        "config_digest",
+        "lambda_daily",
+        "lambda_weekly",
+        "lambda_monthly",
+        "rho",
+        "sqrt_rho"
+      ],
+      "path": "artifacts/data/signal/rho_pit_validated.parquet",
+      "rows": 8952,
+      "sha256": "576614ff2af70f2c48a64ca320590ac3915cd7abc0c86e3790552c1b720bd6ba"
+    },
+    {
+      "bytes": 8868,
+      "columns": [
+        "universe",
+        "config_id",
+        "engine_version",
+        "source_signature",
+        "config_digest",
+        "rows",
+        "date_min",
+        "date_max",
+        "validation_passed",
+        "canonical_file"
+      ],
+      "path": "artifacts/data/signal/rho_pit_validation_manifest.parquet",
+      "rows": 24,
+      "sha256": "8a75a07d3cb1ac58122f76942cd8bc4307015ba2eed079c97f603d782f6d9b33"
+    },
+    {
+      "bytes": 30517,
+      "columns": [
+        "grid",
+        "val",
+        "win",
+        "rho"
+      ],
+      "path": "artifacts/data/signal/roc_intensity.parquet",
+      "rows": 2700,
+      "sha256": "13c3c19d903e5f1f1fa82614849ea173b218f4e30a2d5dacde76cd23c8e74f05"
+    }
+  ],
+  "schema_version": "mfdro-public-research-output-v1.0.0"
+}

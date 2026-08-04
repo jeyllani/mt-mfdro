@@ -1,7 +1,7 @@
 # Portfolio timing tests
 
 Reproducibility bundle for the three-level portfolio-timing inference reported
-in the thesis. The experiment uses the corrected ordinary-common-stock
+in my thesis. The experiment uses the corrected ordinary-common-stock
 universes and the direct Wasserstein SOCP
 
 \[
@@ -17,19 +17,36 @@ see the [repository README](../../README.md).
 
 ## Scope
 
-One signed and resumable run computes three pre-declared inferential levels:
+This bundle is the standalone implementation of the shared timing-inference
+panel loaded by Sections 6.2.4 and 6.2.8.1 of
+[`04_R_Portfolio.ipynb`](../../notebooks/04_R_Portfolio.ipynb). It does not
+reproduce only the final max-$T_{12}$ statistic: one signed and resumable run
+computes all three pre-declared inferential levels from $B=1{,}000$ complete
+portfolio reconstructions:
 
-1. **Timing placebo:** large-cap dynamic Sharpe under simple monthly,
-   six-month-block, and twelve-month-block signal rearrangements.
-2. **Primary max-T family:** four monthly cells (`L_all`, `L_exdc`, `S_all`,
-   `S_exdc`), with `S_exdc` as the target.
-3. **Defensive max-T family:** the extended twelve-cell monthly family, with
-   the same target.
+1. **Timing placebo (Section 6.2.4; Figure P_04 and Table P_02).** The observed
+   net Sharpe of the dynamic large-cap portfolio is compared with the Sharpe
+   obtained after simple monthly, six-month-block, and twelve-month-block
+   rearrangements of the modulation path. Each rearranged signal is passed
+   through the complete portfolio backtest; asset returns are never permuted.
+2. **Primary max-$T_4$ family (Section 6.2.8.1; Figures P_08--P_09 and Tables
+   P_06--P_07).** Each simple monthly draw produces four dynamic-minus-static
+   $\Delta\mathrm{SR}$ statistics: full sample and ex-dot-com for the large-cap
+   (`L_all`, `L_exdc`) and NYSE small--mid-cap (`S_all`, `S_exdc`) universes.
+   Their row-wise maximum defines the multiplicity-adjusted null distribution.
+3. **Extended max-$T_{12}$ family (Section 6.2.8.1; Table P_08).** The same
+   monthly draws are expanded to twelve pre-declared cells by adding six
+   non-overlapping universe--decade cells and two large-cap dispersion-state
+   cells. Taking the maximum over this broader family gives a deliberately more
+   conservative diagnostic.
 
 Within each simple monthly draw, one permutation is shared by the large- and
 small-cap modulation paths. This preserves cross-universe and nested-sample
-dependence. The six- and twelve-month block designs are separate level-1 nulls;
-they are not used for the max-T families.
+dependence before the family maximum is computed. The simple permutation does
+not preserve the signal's serial dependence; the six- and twelve-month block
+designs address that issue only as separate level-1 robustness nulls and are
+not used for the max-$T$ families. Marginal and family-wise upper-tail
+$p$-values use the finite-sample correction $(r+1)/(B+1)$.
 
 ## Public and restricted artifacts
 

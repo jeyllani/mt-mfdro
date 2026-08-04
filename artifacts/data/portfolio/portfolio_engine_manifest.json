@@ -1,0 +1,24 @@
+{
+  "W_EST": 36,
+  "beta_ek": 0.1,
+  "decisions_per_strategy": 373,
+  "engine": "portfolio-pit-v2.0.0-direct-w2-socp",
+  "engine_digest": "7af052301fbbad40b040d46762459f4d45cf4a3de1e716ff2f2913c0c3b7c0bf",
+  "eps_cap": 2.0,
+  "eps_floor": 0.0001,
+  "first_return": "1995-01-31",
+  "initial_pretrade_state": "100pct_cash",
+  "last_return": "2025-12-31",
+  "net_return": "gross_return_minus_cost_rate_times_turnover",
+  "outputs": {
+    "portfolio_decisions.parquet": "ed3a52c5e9bbafb56dbd86058a254c668a437aa06bb2888456d8e22cef25bb49",
+    "portfolio_engine_audit.parquet": "a89b4bb220f4b73c8da12c1199566745e1c41f35bf20d985312c80b47cc931e0",
+    "portfolio_monthly.parquet": "151673f5bb10a530f83d8a2741034101041a0994fc9c6f3bb441858b5923e12c",
+    "portfolio_weight_ledger.parquet": "1df0f15ab612503fc5e0a794afc35107796bb533cd7b33275d1d057b9cc146c7"
+  },
+  "panel_signature": "65f8ccfe9f7dc0797d298a06b8804c4378d8e15d5fc8e6258331179ed21cb76f",
+  "realised_months_per_strategy": 372,
+  "signal_signature": "0355cad35623e13f6831f3633d84cfd287efa8c9f4ef634495f6a43382cea74b",
+  "solver": "MOSEK",
+  "turnover": "sum_abs_risky_assets_cash_excluded"
+}

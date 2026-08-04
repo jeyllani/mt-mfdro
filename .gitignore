@@ -79,6 +79,10 @@ standalone_final_/
 # not contain security-level returns, holdings, identifiers, or weight paths.
 !reproducibility/portfolio_timing_tests/reference/results/*.parquet
 
+# Identifier-free research results used by the public execution path of
+# notebooks 03-05. Their schemas and hashes are documented under artifacts/.
+!artifacts/data/**/*.parquet
+
 # Local agent state
 .codex/
 .agents/

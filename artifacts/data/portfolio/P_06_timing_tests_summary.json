@@ -1,0 +1,10 @@
+{
+  "draws": 1000,
+  "experiment_digest": "88e42643b59e1a736ba20a8a722159bcc13724fb62b954967f68c2648cfbb2e8",
+  "schema_version": "portfolio-timing-tests-notebook-v1.0.0",
+  "target_cell": "S_exdc",
+  "target_observed_delta_sharpe": 0.0052466143877598626,
+  "target_p_marginal": 0.03396603396603397,
+  "target_p_maxT12": 0.5474525474525475,
+  "target_p_maxT4": 0.0999000999000999
+}
